@@ -1,0 +1,33 @@
+.Table {
+  height: 100%;
+  width: 100%;
+}
+
+.table-buttons {
+  display: flex;
+  position: relative;
+  margin: 1rem;
+}
+
+.error-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--danger);
+  font-size: 1.25rem;
+  font-weight: var(--weight-bold);
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.tableRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

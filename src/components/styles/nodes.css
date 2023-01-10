@@ -1,0 +1,31 @@
+.start,
+.target,
+.visited,
+.unvisited,
+.wall,
+.path {
+  height: 25px;
+  width: 25px;
+  border: 1px solid var(--dark);
+}
+
+.start,
+.target {
+  background-color: var(--dark);
+}
+
+.wall {
+  background-color: var(--wall);
+}
+
+.visited {
+  background-color: var(--visited);
+}
+
+.unvisited {
+  background-color: var(--unvisited);
+}
+
+.path {
+  background-color: var(--path);
+}
