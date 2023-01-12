@@ -4,7 +4,11 @@ import "./styles/Table.css";
 
 import { makeTable } from "../util/util.js";
 import { Cell as CellUtil } from "../util/Cell.js";
-import { visualizeBFS } from "../util/visualizers/visualizers.js";
+import {
+  visualizeBFS,
+  visualizeDFS,
+  visualizeDijkstras,
+} from "../util/visualizers/visualizers.js";
 
 import Cell from "./Cell";
 
@@ -43,6 +47,12 @@ function Table(props) {
     const available = {
       "breadth-first search": {
         visualize: visualizeBFS,
+      },
+      "depth-first search": {
+        visualize: visualizeDFS,
+      },
+      "dijkstra's": {
+        visualize: visualizeDijkstras,
       },
     };
     return available[algName];

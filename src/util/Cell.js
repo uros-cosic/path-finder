@@ -14,7 +14,7 @@ export class Cell {
   is_same(other) {
     /* Return true if cell is the same as the other cell */
     if (typeof other !== typeof this) return false;
-    if (other.x === this.x && other.y === this.y) return true;
+    if (other.row === this.row && other.col === this.col) return true;
     return false;
   }
 }
