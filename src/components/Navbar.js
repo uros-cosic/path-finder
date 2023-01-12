@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./styles/Navbar.css";
+import { FaCaretDown } from "react-icons/fa";
 
 import data from "../data/data.json";
 
@@ -28,7 +29,7 @@ function Navbar(props) {
         </li>
         <li>
           <button className="dropdown alg-menu" onClick={handleMenuClick}>
-            Algorithm V
+            Algorithm <FaCaretDown />
           </button>
         </li>
         <div

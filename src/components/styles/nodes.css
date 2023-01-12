@@ -7,6 +7,9 @@
   height: 25px;
   width: 25px;
   border: 1px solid var(--dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wall {

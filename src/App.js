@@ -24,7 +24,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Navbar setSpeed={this.setSpeed} setAlgorithm={this.setAlgorithm} />
+        <Navbar setAlgorithm={this.setAlgorithm} />
         <Legend algorithm={this.state.algorithm} />
         <Table algorithm={this.state.algorithm} />
       </div>

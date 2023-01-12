@@ -6,7 +6,32 @@
 .table-buttons {
   display: flex;
   position: relative;
-  margin: 1rem;
+  margin: 1rem 0;
+}
+
+.table-buttons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.visualize,
+.clear {
+  padding-left: 0.5rem;
+}
+
+.visualize:hover,
+.clear:hover {
+  opacity: 0.9;
+  text-decoration: underline;
+}
+
+.line {
+  border: 1px solid var(--dark);
+  height: 1.5rem;
+  padding: 0;
+  margin: 0;
 }
 
 .error-text {

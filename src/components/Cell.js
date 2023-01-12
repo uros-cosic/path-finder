@@ -1,10 +1,10 @@
-import Image from "./Image";
+import Icon from "./Icon";
 
 function Cell(props) {
   return (
     <div className={`Cell ${props.cell.type}`}>
       {(props.cell.isStart || props.cell.isTarget) && (
-        <Image cell={props.cell} />
+        <Icon cell={props.cell} />
       )}
     </div>
   );

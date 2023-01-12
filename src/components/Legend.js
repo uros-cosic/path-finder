@@ -1,6 +1,9 @@
 import "./styles/Legend.css";
 import "./styles/nodes.css";
 
+import Icon from "./Icon";
+import { Cell } from "../util/Cell";
+
 import data from "../data/data.json";
 import { useEffect } from "react";
 
@@ -26,16 +29,25 @@ function Legend(props) {
     displayDescriptionText(props.algorithm);
   }, [props.algorithm]);
 
+  const s = new Cell(0, 0, "start");
+  const t = new Cell(0, 0, "target");
+  s.isStart = true;
+  t.isTarget = true;
+
   return (
     <div className="Legend">
       <div className="nodes-legend">
         <ul className="nodes-legend-items">
           <li>
-            <div className="start" />
+            <div>
+              <Icon cell={s} />
+            </div>
             <p>Start Node</p>
           </li>
           <li>
-            <div className="target" />
+            <div>
+              <Icon cell={t} />
+            </div>
             <p>Target Node</p>
           </li>
           <li>

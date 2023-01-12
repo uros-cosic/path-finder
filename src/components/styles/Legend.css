@@ -27,6 +27,12 @@
   width: 100%;
 }
 
+.nodes-legend-items div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .nodes-legend-items li {
   display: flex;
   justify-content: center;

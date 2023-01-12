@@ -20,7 +20,6 @@ export const makeTable = (tableEl, weighted) => {
   const { height, width } = calculateSize(tableEl);
   const row = Math.floor(height / Cell.CELL_SIZE);
   const col = Math.floor(width / Cell.CELL_SIZE);
-  console.log(height, width);
   let res = [];
   for (let i = 0; i < row; i++) {
     let curr = [];

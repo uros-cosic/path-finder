@@ -11,7 +11,7 @@ export class Cell {
     this.isTarget = false; // cell is target node
   }
 
-  isSame(other) {
+  is_same(other) {
     /* Return true if cell is the same as the other cell */
     if (typeof other !== typeof this) return false;
     if (other.x === this.x && other.y === this.y) return true;

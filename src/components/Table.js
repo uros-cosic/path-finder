@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import { FaPlay, FaTrash } from "react-icons/fa";
 import "./styles/Table.css";
 
 import { makeTable } from "../util/util.js";
 import { Cell as CellUtil } from "../util/Cell.js";
+import { visualizeBFS } from "../util/visualizers/visualizers.js";
 
 import Cell from "./Cell";
 
@@ -37,11 +39,40 @@ function Table(props) {
     });
   }, []);
 
+  const getAlgorithm = (algName) => {
+    const available = {
+      "breadth-first search": {
+        visualize: visualizeBFS,
+      },
+    };
+    return available[algName];
+  };
+
+  const handleVisualize = () => {
+    const res = getAlgorithm(props.algorithm)["visualize"](
+      table.table,
+      table.start,
+      table.target,
+      table.row_len,
+      table.col_len
+    );
+    setTable({
+      table: res,
+    });
+  };
+
   return (
     <div className="Table">
       <div className="table-buttons">
-        <button>Visualize</button>
-        <button>Clear</button>
+        <button onClick={handleVisualize}>
+          <FaPlay />
+          <div className="visualize">Visualize</div>
+        </button>
+        <hr className="line" />
+        <button>
+          <FaTrash />
+          <div className="clear">Clear</div>
+        </button>
         <p className="error-text"></p>
         {/* Dodaj za Speed (imas u sorting vis)*/}
       </div>
