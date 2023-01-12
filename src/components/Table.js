@@ -104,7 +104,7 @@ function Table(props) {
 
     if (isVisualizing) return;
     if (visualized) {
-      const tempTable = clearTable(table, true);
+      const tempTable = clearTable(table, showWeights, true);
       animateVisualized(props.algorithm, tempTable);
     } else {
       setIsVisualizing(true);
@@ -115,7 +115,7 @@ function Table(props) {
   const handleClear = () => {
     /* Handle Clear Button Click*/
     if (isVisualizing) return;
-    updateTable(clearTable(table));
+    updateTable(clearTable(table, showWeights));
     setVisualized(false);
   };
 
@@ -144,7 +144,7 @@ function Table(props) {
       table.table[row][col].weight = 1;
       updateTable(tableWallToggle(table.table, row, col));
       if (visualized) {
-        let tempTable = clearTable(table, true);
+        let tempTable = clearTable(table, showWeights, true);
         visualizeVizualized(props.algorithm, tempTable);
       }
     }
@@ -159,7 +159,7 @@ function Table(props) {
         table.table[row][col].weight = 0;
         updateTable(tableWallToggle(table.table, row, col));
         if (visualized) {
-          let tempTable = clearTable(table, true);
+          let tempTable = clearTable(table, showWeights, true);
           visualizeVizualized(props.algorithm, tempTable);
         }
       }
@@ -179,7 +179,7 @@ function Table(props) {
             )
           );
           if (visualized) {
-            let tempTable = clearTable(table, true);
+            let tempTable = clearTable(table, showWeights, true);
             visualizeVizualized(props.algorithm, tempTable);
           }
         }
@@ -198,7 +198,7 @@ function Table(props) {
             )
           );
           if (visualized) {
-            let tempTable = clearTable(table, true);
+            let tempTable = clearTable(table, showWeights, true);
             visualizeVizualized(props.algorithm, tempTable);
           }
         }

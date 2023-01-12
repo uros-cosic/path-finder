@@ -45,7 +45,7 @@ export const makeWeightedTable = (table) => {
   return T;
 };
 
-export const clearTable = (table, keep_walls = false) => {
+export const clearTable = (table, weighted = false, keep_walls = false) => {
   /* Clear the table nodes to default, but don't change start & target node position.
 
   Save walls if keep_walls is true
@@ -54,7 +54,7 @@ export const clearTable = (table, keep_walls = false) => {
   for (let i = 0; i < T.length; i++) {
     for (let j = 0; j < T[i].length; j++) {
       if (keep_walls && T[i][j].type === "wall") {
-        T[i][j].weight = rngWeight();
+        T[i][j].weight = weighted ? rngWeight() : 1;
         continue;
       }
       T[i][j].type = "unvisited";
