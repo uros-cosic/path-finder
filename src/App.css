@@ -1,5 +1,6 @@
 :root {
   --light: #fff;
+  --gray: #eee;
   --dark: #1a1a1a;
   --primary: #5555ff;
   --path: #ffff00;
@@ -9,8 +10,8 @@
   --unvisited: var(--light);
   --weight-bold: 500;
   --weight-bolder: 600;
-  --weight-light: 200;
-  --weight-lighter: 300;
+  --weight-light: 300;
+  --weight-lighter: 200;
 }
 
 a {
@@ -20,4 +21,20 @@ a {
 
 ul {
   list-style: none;
+}
+
+.bold {
+  font-weight: var(--weight-bold);
+}
+
+.bolder {
+  font-weight: var(--weight-bolder);
+}
+
+.light {
+  font-weight: var(--weight-light);
+}
+
+.lighter {
+  font-weight: var(--weight-lighter);
 }

@@ -1,9 +1,9 @@
-.start,
-.target,
 .visited,
 .unvisited,
 .wall,
-.path {
+.path,
+.Cell,
+.weighted {
   height: 25px;
   width: 25px;
   border: 1px solid var(--dark);
@@ -28,8 +28,51 @@
   background-color: var(--path);
 }
 
-.Cell {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.weighted {
+  font-size: 1rem;
+  color: var(--dark);
+}
+
+.visitedAnimated {
+  background-color: var(--primary);
+  animation-name: forvisited;
+  animation-duration: 0.5s;
+}
+
+.pathAnimated {
+  background-color: var(--path);
+  animation-name: forpath;
+  animation-duration: 1s;
+}
+
+/* Animations */
+
+@keyframes forpath {
+  from {
+    background-color: var(--primary);
+  }
+
+  to {
+    background-color: var(--path);
+  }
+}
+
+@keyframes forvisited {
+  from {
+    background-color: var(--light);
+  }
+
+  to {
+    background-color: var(--primary);
+  }
+}
+
+@keyframes forwall {
+  from {
+    background-color: var(--primary);
+  }
+
+  to {
+    background-color: var(--wall);
+  }
 }

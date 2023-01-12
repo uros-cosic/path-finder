@@ -1,4 +1,5 @@
 export class Cell {
+  /* Cell representing single cell in a table */
   static CELL_SIZE = 25;
 
   constructor(row, col, type = "unvisited", weight = 1) {

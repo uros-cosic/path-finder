@@ -17,12 +17,14 @@
 }
 
 .visualize,
-.clear {
+.clear,
+.weights {
   padding-left: 0.5rem;
 }
 
 .visualize:hover,
-.clear:hover {
+.clear:hover,
+.weights:hover {
   opacity: 0.9;
   text-decoration: underline;
 }
@@ -44,11 +46,15 @@
   font-weight: var(--weight-bold);
 }
 
-button {
+.table-buttons button {
   border: none;
   background-color: transparent;
   margin: 0 1rem;
   cursor: pointer;
+}
+
+.table-buttons button:hover {
+  background-color: var(--gray);
 }
 
 .tableRow {

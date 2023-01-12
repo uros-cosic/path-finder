@@ -2,15 +2,15 @@
   "algorithms": [
     {
       "name": "Breadth-First Search",
-      "description": "is an algorithm for searching a tree data structure for a node that satisfies a given property. It guarantees a shortest path on a unweighted graph"
+      "description": "is an algorithm for searching a graph for a node that satisfies a given property. It guarantees a shortest path on a unweighted graph"
     },
     {
       "name": "Depth-First Search",
-      "description": "is an algorithm for traversing or searching tree or graph data structures. It doesn't guarantee the shortest path"
+      "description": "is an algorithm for traversing or searching a graph. It doesn't guarantee the shortest path"
     },
     {
       "name": "Dijkstra's",
-      "description": "is an algorithm for finding the shortest paths between nodes in a graph, which may represent, for example, road networks. It guarantees the shortest path"
+      "description": "is an algorithm for finding the shortest paths between nodes in a graph. It guarantees the shortest path"
     }
   ]
 }
