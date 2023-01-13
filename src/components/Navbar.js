@@ -38,12 +38,9 @@ function Navbar(props) {
         >
           <ul className="dropdown-items">
             {data.algorithms.map((alg, idx) => (
-              <>
-                <li key={idx} onClick={handleItemClick}>
-                  {alg.name}
-                </li>
-                <div className="nav-line"></div>
-              </>
+              <div key={idx}>
+                <li onClick={handleItemClick}>{alg.name}</li>
+              </div>
             ))}
           </ul>
         </div>

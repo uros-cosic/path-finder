@@ -71,7 +71,14 @@
   text-decoration: underline;
 }
 
-.nav-line:not(:last-child) {
+.dropdown-items div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.dropdown-items div:not(:last-child) {
   border-bottom: 1px solid var(--dark);
   width: 90%;
   margin: auto;
